@@ -1,4 +1,4 @@
-# vr-ladyrinth
+# Hide And Go Leek
 
 ## USER STORIES
 
