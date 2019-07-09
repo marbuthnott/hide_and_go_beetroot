@@ -1,5 +1,9 @@
 # Hide And Go Leek
 
+## INTRODUCTION
+
+A virtual reality game where the players are timed against the clock to find the golden leek from within the virtual world.
+
 ## USER STORIES
 
 REQUIRED
