@@ -21,9 +21,10 @@ public class PlayerWalk : MonoBehaviour
         //     Debug.Log("Pressed Fire1");
         // }
 
-        if(Input.GetButton("Fire1"))
+        if(Input.GetMouseButton(0)) 
         {
             Debug.Log("Pressed Fire1");
+            transform.position = transform.position + Camera.main.transform.forward * playerSpeed * Time.deltaTime;
         }
     }
 }
