@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-A virtual reality game where the players are timed against the clock to find the golden leek from within the virtual world.
+A virtual reality game where the players are up against the clock to find the golden leek from within the virtual world.
 
 ## USER STORIES
 
