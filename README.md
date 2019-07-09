@@ -31,3 +31,10 @@ As a game player,
 So that I can have a competitve game,
 I would like to see a leaderboard with players scores.
 ```
+
+### Co-authoring
+
+Co-authored-by: n3ttl3t <n3ttl3t@gmail.com>
+Co-authored-by: VladC24 <vlad_chiriac@hotmail.com>
+Co-authored-by: marbuthnott <magnusarbuthnott@gmail.com>
+C0-authored-by: Carlton Anand <carlton.anand@gmail.com>
