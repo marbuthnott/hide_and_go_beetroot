@@ -4,26 +4,17 @@ using UnityEngine;
 
 public class PlayerWalk : MonoBehaviour
 {
-    
+
     public int playerSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("started");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // if(Input.GetMouseButton(0))
-        // {
-        //     Debug.Log("Pressed Fire1");
-        // }
-
         if(Input.GetMouseButton(0)) 
         {
-            Debug.Log("Pressed Fire1");
             transform.position = transform.position + Camera.main.transform.forward * playerSpeed * Time.deltaTime;
         }
     }
