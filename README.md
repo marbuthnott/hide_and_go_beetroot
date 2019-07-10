@@ -32,8 +32,16 @@ I would like to be able to have a timer that ends the game if I can't find the l
 NICE TO HAVE
 ```
 As a game player,
+So that I can play again,
+I would like to be able to see and interact with an option to restart the game.
+
+As a game player,
 So that I can have a competitve game,
 I would like to see a leaderboard with players scores.
+
+As a game player,
+So that I can have a nice experience,
+I would like to hear some moody music while I play the game.
 ```
 
 ### Co-authoring
