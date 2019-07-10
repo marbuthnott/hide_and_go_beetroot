@@ -1,4 +1,0 @@
-#Tue Jul 09 11:20:37 BST 2019
-base.0=/Users/student/Projects/vr-hide-and-go-leek/vr-hide-and-go-leek/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
