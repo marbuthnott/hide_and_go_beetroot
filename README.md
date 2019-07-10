@@ -49,4 +49,4 @@ I would like to hear some moody music while I play the game.
 Co-authored-by: n3ttl3t <n3ttl3t@gmail.com>
 Co-authored-by: VladC24 <vlad_chiriac@hotmail.com>
 Co-authored-by: marbuthnott <magnusarbuthnott@gmail.com>
-C0-authored-by: Carlton Anand <carlton.anand@gmail.com>
+Co-authored-by: Carlton Anand <carlton.anand@gmail.com>
