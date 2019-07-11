@@ -13,9 +13,8 @@ public class ObjectInteraction : MonoBehaviour
 
     void OnCollisionEnter()
     {
-        Debug.Log("Hit Object");
 
-        SceneManager.LoadScene("Leaderboard");
+        SceneManager.LoadScene("EndMenu");
     }
 
     // Update is called once per frame
