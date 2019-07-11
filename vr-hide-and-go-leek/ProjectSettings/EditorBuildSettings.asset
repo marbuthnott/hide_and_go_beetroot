@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Test/blue_grid.unity
-    guid: bd712457fec2743c7a040d0bf79e712f
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 1432324ab17cd42cfa094b3e10a92f57
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 58140a24c61ed429790d6bf710f2f35a
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 8c686dd9f086e4fc3a7f8f86bd522acc
-  - enabled: 0
-    path: Assets/Scenes/Leaderboard.unity
-    guid: e2c54ee08c1cb489f9a736c75da4bd0e
   m_configObjects: {}
