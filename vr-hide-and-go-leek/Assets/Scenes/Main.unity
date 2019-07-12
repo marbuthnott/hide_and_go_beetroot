@@ -1102,6 +1102,7 @@ MonoBehaviour:
   timeLeft: 30
   countdownText: {fileID: 1493100339}
   walk: {fileID: 2003032631}
+  cameraSwitcher: {fileID: 311747010}
 --- !u!1001 &1542336413
 PrefabInstance:
   m_ObjectHideFlags: 0
