@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraInteraction : MonoBehaviour {
 
@@ -21,6 +22,18 @@ public class CameraInteraction : MonoBehaviour {
 
         			GameObject.Find("HardSphere").GetComponent<MeshRenderer>().enabled = true;
         			GameObject.Find("HardTextSphere").GetComponent<MeshRenderer>().enabled = true;
+        		}
+
+        		if (rayhit.transform.name == "EasySphere") {
+        			SceneManager.LoadScene("Main");
+        		}
+
+        		if (rayhit.transform.name == "MediumSphere") {
+        			SceneManager.LoadScene("Main");
+        		}
+
+        		if (rayhit.transform.name == "HardSphere") {
+        			SceneManager.LoadScene("Main");
         		}
         	}
         }
