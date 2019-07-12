@@ -11,6 +11,8 @@ public class CountdownTimer : MonoBehaviour
  	public Text countdownText;
     public PlayerWalk walk;
 
+    public PlayerOrientation cameraSwitcher;
+
     void Start()
     {
 		StartCoroutine("LoseTime");    
@@ -26,6 +28,7 @@ public class CountdownTimer : MonoBehaviour
         	countdownText.text = "Time's up!";
             walk.enabled = false;
             StartCoroutine("LoseMessage"); 
+            cameraSwitcher.ShowOverheadView();
         } 
     }
 
