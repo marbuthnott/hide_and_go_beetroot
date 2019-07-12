@@ -37,7 +37,7 @@ public class CountdownTimer : MonoBehaviour
     }
 
     IEnumerator LoseMessage() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(10);
         SceneManager.LoadScene("EndMenu");
     }
 }

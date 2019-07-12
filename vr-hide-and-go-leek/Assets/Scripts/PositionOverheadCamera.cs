@@ -10,8 +10,7 @@ public class PositionOverheadCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UnityEngine.XR.InputTracking.Recenter();
-        transform.position = new Vector3(40, 55, 0);
+        transform.position = new Vector3(50, 20, 0);
     }
 
     void Update()
