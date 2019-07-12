@@ -10,6 +10,8 @@ public class ObjectInteraction : MonoBehaviour
     public CountdownTimer timer;
     public PlayerWalk walk;
 
+    public PlayerOrientation cameraSwitcher;
+
     void OnCollisionEnter()
     {
         Debug.Log("Hit Object");
@@ -17,10 +19,11 @@ public class ObjectInteraction : MonoBehaviour
         hitObjectText.text = "You win!";
         walk.enabled = false;
         StartCoroutine("WinMessage");
+        cameraSwitcher.ShowOverheadView();
     }
 
      IEnumerator WinMessage() {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("EndMenu");
     }
 }
