@@ -14,7 +14,6 @@ public class ObjectInteraction : MonoBehaviour
 
     void OnCollisionEnter()
     {
-        Debug.Log("Hit Object");
         timer.enabled = false;
         hitObjectText.text = "You win!";
         walk.enabled = false;
@@ -24,6 +23,6 @@ public class ObjectInteraction : MonoBehaviour
 
      IEnumerator WinMessage() {
         yield return new WaitForSeconds(10);
-        SceneManager.LoadScene("EndMenu");
+        SceneManager.LoadScene("Leaderboard");
     }
 }
