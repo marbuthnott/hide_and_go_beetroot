@@ -12,11 +12,21 @@ public class ObjectInteraction : MonoBehaviour
 
     public PlayerOrientation cameraSwitcher;
 
+    private float startTime;
+    private float scoreTime;
+
+    void Start() {
+        startTime = Time.time;
+    }
+
     void OnCollisionEnter()
-    {
+    {   
+
         timer.enabled = false;
         hitObjectText.text = "You win!";
         walk.enabled = false;
+        calculateScoreTime();
+        Debug.Log(scoreTime);
         StartCoroutine("WinMessage");
         cameraSwitcher.ShowOverheadView();
     }
@@ -24,5 +34,9 @@ public class ObjectInteraction : MonoBehaviour
      IEnumerator WinMessage() {
         yield return new WaitForSeconds(10);
         SceneManager.LoadScene("Leaderboard");
+    }
+
+    void calculateScoreTime() {
+        scoreTime = Time.time - startTime;
     }
 }
