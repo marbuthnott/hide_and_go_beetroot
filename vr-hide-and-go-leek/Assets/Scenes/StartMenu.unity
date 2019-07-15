@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -161,12 +161,12 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 70
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 07a3b62c119044b829b2e9fbc9e81795, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4282879156
+    rgba: 4278222772
 --- !u!135 &651581185
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 07a3b62c119044b829b2e9fbc9e81795, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4280768726
+    rgba: 4278195347
 --- !u!135 &775453147
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977078035}
-  m_Text: PLAY!
+  m_Text: PLAY
   m_OffsetZ: 0
   m_CharacterSize: 0.03
   m_LineSpacing: 1
@@ -520,12 +520,12 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 100
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 07a3b62c119044b829b2e9fbc9e81795, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4286304081
+    rgba: 4283005744
 --- !u!135 &977078038
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -929,6 +929,7 @@ MonoBehaviour:
   hitObjectText: {fileID: 0}
   timer: {fileID: 0}
   walk: {fileID: 0}
+  cameraSwitcher: {fileID: 0}
 --- !u!114 &1409415726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,12 +1083,12 @@ TextMesh:
   m_Alignment: 0
   m_TabSize: 4
   m_FontSize: 70
-  m_FontStyle: 0
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 07a3b62c119044b829b2e9fbc9e81795, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4280724165
+    rgba: 4278229110
 --- !u!135 &1739784605
 SphereCollider:
   m_ObjectHideFlags: 0

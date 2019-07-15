@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class PlayerWalk : MonoBehaviour
 {
-
     public int playerSpeed;
-
-    void Start()
-    {
-    }
 
     void Update()
     {

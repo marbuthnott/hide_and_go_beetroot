@@ -35,6 +35,10 @@ public class CameraInteraction : MonoBehaviour {
         		if (rayhit.transform.name == "HardSphere") {
         			SceneManager.LoadScene("Main");
         		}
+
+						if (rayhit.transform.name == "StartMenuObject") {
+        			SceneManager.LoadScene("StartMenu");
+        		}
         	}
         }
     }

@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 91720572}
   - component: {fileID: 91720571}
   m_Layer: 0
-  m_Name: Pillar
+  m_Name: CornerPillar3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 1290919705}
   - component: {fileID: 1290919704}
   m_Layer: 0
-  m_Name: Pillar
+  m_Name: CornerPillar4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1255,7 +1255,7 @@ GameObject:
   - component: {fileID: 1844132836}
   - component: {fileID: 1844132835}
   m_Layer: 0
-  m_Name: Pillar
+  m_Name: CornerPillar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1476,7 +1476,7 @@ GameObject:
   - component: {fileID: 2008592331}
   - component: {fileID: 2008592330}
   m_Layer: 0
-  m_Name: Pillar
+  m_Name: CornerPillar1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
