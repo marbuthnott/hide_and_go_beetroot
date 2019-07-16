@@ -1,19 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
     
     public float playerScore;
-    List<KeyValuePair<string, float>> leaderboard;
-    private List<HighscoreEntry> highscoreEntryList;
+    // List<KeyValuePair<string, float>> leaderboard;
+    // private List<HighscoreEntry> highscoreEntryList;
 
     void Awake() {
         // leaderboard = new List<KeyValuePair<string, float>>();
-        highscoreEntryList = new List<HighscoreEntry() {
-
-        }
+        // highscoreEntryList = new List<HighscoreEntry>();
         DontDestroyOnLoad(this.gameObject);
     }
 
