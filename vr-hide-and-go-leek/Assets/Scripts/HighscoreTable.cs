@@ -18,26 +18,28 @@ public class HighscoreTable : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);  
 
-        AddHighscoreEntry(70, "MAG");
+        // AddHighscoreEntry(70, "MAG");
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         // Sort entry list by score
-        for (int i=0; i < highscores.highscoreEntryList.Count; i++) {
-            for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++) {
-                if (highscores.highscoreEntryList[j].time < highscores.highscoreEntryList[i].time) {
-                    // Swap
-                    HighscoreEntry tmp = highscores.highscoreEntryList[i];
-                    highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
-                    highscores.highscoreEntryList[j] = tmp;
+            for (int i=0; i < highscores.highscoreEntryList.Count; i++) {
+                for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++) {  
+                    if (highscores.highscoreEntryList[j].time < highscores.highscoreEntryList[i].time) {
+                        // Swap
+                        HighscoreEntry tmp = highscores.highscoreEntryList[i];
+                        highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
+                        highscores.highscoreEntryList[j] = tmp;                            
+                    }  
                 }
             }
-        }
 
         highscoreEntryTransformList = new List<Transform>();
+        int count = 0;
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) {
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+            if (++count == 10) break;
         }
     }
 
