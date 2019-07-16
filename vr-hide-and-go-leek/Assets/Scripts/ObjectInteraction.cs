@@ -10,7 +10,7 @@ public class ObjectInteraction : MonoBehaviour
     public CountdownTimer timer;
     public PlayerWalk walk;
     public PlayerOrientation cameraSwitcher;
-    public DontDestroy scoreManager;
+    public ScoreManager scoreManager;
 
     public float startTime;
     private float scoreTime;

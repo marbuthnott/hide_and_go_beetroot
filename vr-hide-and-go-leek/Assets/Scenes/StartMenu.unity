@@ -930,6 +930,8 @@ MonoBehaviour:
   timer: {fileID: 0}
   walk: {fileID: 0}
   cameraSwitcher: {fileID: 0}
+  scoreManager: {fileID: 0}
+  startTime: 0
 --- !u!114 &1409415726
 MonoBehaviour:
   m_ObjectHideFlags: 0

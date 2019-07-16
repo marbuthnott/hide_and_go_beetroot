@@ -41,7 +41,7 @@ public class CountdownTimer : MonoBehaviour
 
     IEnumerator LoseMessage() {
         yield return new WaitForSeconds(10);
-        SceneManager.LoadScene("EndMenu");
+        SceneManager.LoadScene("Leaderboard");
     }
 }
  
