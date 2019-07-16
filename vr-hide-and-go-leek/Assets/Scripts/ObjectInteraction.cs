@@ -9,24 +9,28 @@ public class ObjectInteraction : MonoBehaviour
     public Text hitObjectText;
     public CountdownTimer timer;
     public PlayerWalk walk;
-
     public PlayerOrientation cameraSwitcher;
+    public DontDestroy scoreManager;
 
-    private float startTime;
+    public float startTime;
     private float scoreTime;
+
+    // SortedDictionary<string, float> leaderboardList;
+
+    // void Awake() {
+    //     leaderboardList = new SortedDictionary<string, float>();
+    // }
 
     void Start() {
         startTime = Time.time;
     }
 
-    void OnCollisionEnter()
-    {   
-
+    void OnCollisionEnter() {   
         timer.enabled = false;
         hitObjectText.text = "You win!";
         walk.enabled = false;
-        calculateScoreTime();
-        Debug.Log(scoreTime);
+        CalculateScoreTime();
+        scoreManager.UpdateScore(scoreTime);
         StartCoroutine("WinMessage");
         cameraSwitcher.ShowOverheadView();
     }
@@ -36,7 +40,16 @@ public class ObjectInteraction : MonoBehaviour
         SceneManager.LoadScene("Leaderboard");
     }
 
-    void calculateScoreTime() {
+    void CalculateScoreTime() {
         scoreTime = Time.time - startTime;
     }
+
+    // void AddScore() {
+    //     leaderboardList.Add("Mag", scoreTime);
+    //     foreach( KeyValuePair<string, float> element in leaderboardList )
+    //     {
+    //         Debug.Log(element.Key);
+    //         Debug.Log(element.Value);
+    //     }
+    // }
 }
