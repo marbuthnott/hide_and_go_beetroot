@@ -23,6 +23,10 @@ public class CountdownTimer : MonoBehaviour
     {
         countdownText.text = ("" + timeLeft);
 
+        if (timeLeft <= 5) {
+            countdownText.color = Color.red;
+        }
+
         if (timeLeft <= 0) {
         	StopCoroutine("LoseTime");
         	countdownText.text = "Time's up!";
