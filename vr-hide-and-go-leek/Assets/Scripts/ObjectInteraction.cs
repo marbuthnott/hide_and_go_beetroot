@@ -23,14 +23,16 @@ public class ObjectInteraction : MonoBehaviour
     {
         Debug.Log("Hit Object");
         timer.enabled = false;
+        hitObjectText.color = Color.green;
         hitObjectText.text = "You win!";
         walk.enabled = false;
         StartCoroutine("WinMessage");
         cameraSwitcher.ShowOverheadView();
+        timer.StopCoroutine("LoseTime");
     }
 
      IEnumerator WinMessage() {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("EndMenu");
     }
 }

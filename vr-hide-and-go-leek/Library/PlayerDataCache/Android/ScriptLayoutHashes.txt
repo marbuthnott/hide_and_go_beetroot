@@ -2,12 +2,12 @@ Android
 PlayerPath?
 /Users/student/Projects/vr-hide-and-go-leek/vr-hide-and-go-leek/generatedMaze.apk
 SceneListBegin?
-Assets/Scenes/StartMenu.unity
+Assets/Scenes/Test/GVRPointerButtonTest.unity
 Assets/Scenes/Main.unity
 Assets/Scenes/EndMenu.unity
 SceneListEnd?
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
-e345098c9c4ffc47976cc39803922f77 Assembly-CSharp.dll:.MazeGenerator
+b369f0f4215a35fd6d24926dce46187b Assembly-CSharp.dll:.MazeGenerator
 23efcd1831b04ace52b7b3485f150f24 Assembly-CSharp.dll:.GvrDropdown
 8f9981ae062e1a02c7f0bcdf63e95233 Assembly-CSharp.dll:GoogleVR.HelloVR.HeadsetDemoManager
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -24,7 +24,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.G
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Gvr.Internal.EditorCameraOriginDict
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LoadOnClick
+62a68991567c00495a41b2d07c44f6b7 Assembly-CSharp.dll:.LoadOnClick
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.MenuEventListener
 84b31b71fcfc0d02bf4204522ea292b1 Assembly-CSharp.dll:.GvrVideoPlayerTexture
@@ -217,3 +217,4 @@ f0077b931a26a7eeaf5e245c7ef51ec4 Assembly-CSharp.dll:.GvrPointerInputModule
 719e5a8f63dda20dad1ba86875c22268 Assembly-CSharp.dll:GoogleVR.VideoDemo.AutoPlayVideo
 9ef0ed9504edb9d0914e240dee1b7846 Assembly-CSharp.dll:GoogleVR.Beta.GvrBetaControllerVisualMulti
 ba9238aad8dbdb7ac4454ce9113d3ea4 Assembly-CSharp.dll:.ObjectInteraction
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.backToMenu
