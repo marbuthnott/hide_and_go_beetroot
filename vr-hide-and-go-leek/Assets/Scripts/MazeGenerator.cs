@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class MazeGenerator : MonoBehaviour
 {
+    public int EasySize;
+    public int MediumSize;
+    public int HardSize;
     public int gridSize;
+    private LoadOnClick difficultyHolder;
+
     public GameObject tile;
+    public GameObject treasure;
     
     private List<Vector3> spaces;
     private List<Vector3> tiles;
 
+    private Dictionary<string, int> distancesFromStart;
+    private int distance;
+
     private GameObject previousTile;
     private GameObject currentTile;
-
 
     private List<Vector3> possibleDirections;
     private Vector3 targetLocation;
@@ -20,9 +28,14 @@ public class MazeGenerator : MonoBehaviour
     void Start()
     {
         populateSpaces();
+        distancesFromStart = new Dictionary<string, int>();
+        distance = 0;
         gridSize = (gridSize - 1) * 5;
         RunAndSeek();
+        PlaceTreasure();
     }
+
+
 
     void populateSpaces()
     {
@@ -34,10 +47,6 @@ public class MazeGenerator : MonoBehaviour
                 spaces.Add(new Vector3(x * 5,0,z * 5));
             }
         }
-        foreach(Vector3 space in spaces)
-        {
-            Debug.Log(space);
-        }
     }
 
     void RunAndSeek()
@@ -45,17 +54,21 @@ public class MazeGenerator : MonoBehaviour
         tiles = new List<Vector3>();
         possibleDirections = new List<Vector3>();
 
-
         currentTile = Instantiate(tile, new Vector3(0, 0, 0), Quaternion.identity);
         currentTile.name = $"tile {currentTile.transform.position.x},{currentTile.transform.position.z}";
 
         tiles.Add(currentTile.transform.position);
-        
-        while(true)
+
+        distancesFromStart.Add(currentTile.name, distance);
+
+
+
+        while(tiles.Count != spaces.Count)
         {
             buildMaze();
         }
         
+       
         // StartCoroutine("buildMazeSlowly");
 
     }
@@ -69,20 +82,32 @@ public class MazeGenerator : MonoBehaviour
         currentTile.name = $"tile {currentTile.transform.position.x},{currentTile.transform.position.z}";
         removeBackwardsWall();
         tiles.Add(currentTile.transform.position);
+        addToDistances();
     }
 
-    IEnumerator buildMazeSlowly()
+    void addToDistances()
     {
-        yield return new WaitForSeconds(0.1F);
-        chooseNextLocation();
-        removeForwardWall();
-        previousTile = currentTile;
-        currentTile = Instantiate(tile, new Vector3(targetLocation.x, 0, targetLocation.z), Quaternion.identity);
-        currentTile.name = $"tile {currentTile.transform.position.x},{currentTile.transform.position.z}";
-        removeBackwardsWall();
-        tiles.Add(currentTile.transform.position);
-        StartCoroutine("buildMazeSlow");
+        distance = distancesFromStart[$"{previousTile.name}"] + 1;
+        distancesFromStart.Add(currentTile.name, distance);
     }
+
+    // IEnumerator buildMazeSlowly()
+    // {
+    //     yield return new WaitForSeconds(0.1F);
+    //     chooseNextLocation();
+    //     removeForwardWall();
+    //     previousTile = currentTile;
+    //     currentTile = Instantiate(tile, new Vector3(targetLocation.x, 0, targetLocation.z), Quaternion.identity);
+    //     currentTile.name = $"tile {currentTile.transform.position.x},{currentTile.transform.position.z}";
+    //     removeBackwardsWall();
+    //     tiles.Add(currentTile.transform.position);
+    //     addToDistances();
+    //     foreach(KeyValuePair<string, int> element in distancesFromStart)
+    //     {
+    //         Debug.Log($"{element.Key}, {element.Value}");
+    //     }
+    //     StartCoroutine("buildMazeSlowly");
+    // }
 
     void chooseNextLocation()
     {
@@ -124,6 +149,7 @@ public class MazeGenerator : MonoBehaviour
             Debug.Log("No options!");
             Seek();
         }
+        
         targetLocation = possibleDirections[Random.Range(0, possibleDirections.Count)];
         possibleDirections.Clear();
     }
@@ -177,8 +203,8 @@ public class MazeGenerator : MonoBehaviour
     void Seek()
     {
         foreach(Vector3 space in spaces)
-        {
-            if(tiles.Contains(space))
+        {   
+            if (tiles.Contains(space))
             {
             }
             else
@@ -205,10 +231,24 @@ public class MazeGenerator : MonoBehaviour
                 possibleDirections.Clear();
                 possibleDirections.Add(space);
                 currentTile = GameObject.Find($"tile {tile.x},{tile.z}");
-                Debug.Log($"{tile}, {previousTile}");
                 break;
             }
         }
 
+    }
+
+    void PlaceTreasure () 
+    {
+        KeyValuePair<string, int> furthest = new KeyValuePair<string, int>("", 0);
+        foreach(KeyValuePair<string, int> element in distancesFromStart)
+        {
+            if (element.Value > furthest.Value)
+            {
+                furthest = element;
+            }
+        }
+        GameObject treasureTile = GameObject.Find(furthest.Key);
+        GameObject finish = Instantiate(treasure, treasureTile.transform.position, Quaternion.identity);
+        Debug.Log(treasureTile);
     }
 }

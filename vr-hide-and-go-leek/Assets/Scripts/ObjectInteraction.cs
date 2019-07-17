@@ -9,8 +9,15 @@ public class ObjectInteraction : MonoBehaviour
     public Text hitObjectText;
     public CountdownTimer timer;
     public PlayerWalk walk;
-
     public PlayerOrientation cameraSwitcher;
+
+    void Start () 
+    {
+        hitObjectText = GameObject.Find("Timer").GetComponent(typeof(Text)) as Text;
+        timer = GameObject.Find("Timer").GetComponent(typeof(CountdownTimer)) as CountdownTimer;
+        walk = GameObject.Find("Player").GetComponent(typeof(PlayerWalk)) as PlayerWalk;
+        cameraSwitcher = GameObject.Find("floor").GetComponent(typeof(PlayerOrientation)) as PlayerOrientation;
+    }
 
     void OnCollisionEnter()
     {

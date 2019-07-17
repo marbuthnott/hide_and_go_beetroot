@@ -7,7 +7,7 @@ public class CameraInteraction : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButton(0)) {
         	Ray mouseray = Camera.main.ScreenPointToRay(Input.mousePosition);
         	RaycastHit rayhit;
         	if (Physics.Raycast(mouseray, out rayhit, 1000.0f)) {
