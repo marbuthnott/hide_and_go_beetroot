@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class HighscoreTable : MonoBehaviour
 {
-
     private Transform entryContainer;
     private Transform entryTemplate;
     // private List<HighscoreEntry> highscoreEntryList;
+    private float playerTime;
     private List<Transform> highscoreEntryTransformList;
+    public ScoreManager scoreManager;
 
     private void Awake() {
         entryContainer = transform.Find("HighscoreEntryContainer");
@@ -18,7 +19,13 @@ public class HighscoreTable : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);  
 
-        // AddHighscoreEntry(70, "MAG");
+        // playerTime = (float.Parse(PlayerPrefs.GetString("playerScore")));
+
+        // Debug.Log(float.Parse(PlayerPrefs.GetString("playerScore")));
+
+        playerTime = float.Parse(PlayerPrefs.GetString("playerScore"));
+
+       AddHighscoreEntry((float)System.Math.Round(playerTime,2), "CMA");
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -62,7 +69,7 @@ public class HighscoreTable : MonoBehaviour
 
         entryTransform.Find("posText").GetComponent<Text>().text = rankString;
 
-        int time = highscoreEntry.time;
+        float time = highscoreEntry.time;
 
         entryTransform.Find("timeText").GetComponent<Text>().text = time.ToString();
 
@@ -73,7 +80,7 @@ public class HighscoreTable : MonoBehaviour
         transformList.Add(entryTransform);
     }
 
-    private void AddHighscoreEntry(int time, string name) {
+    private void AddHighscoreEntry(float time, string name) {
         // Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { time = time, name = name };
 
@@ -90,13 +97,22 @@ public class HighscoreTable : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    private class PlayerScore {
+        public List<PlayerScoreEntry> playerScoreEntryList;
+    }
+
+    [System.Serializable]
+    private class PlayerScoreEntry {
+        public float time;
+    }
+
     private class Highscores {
         public List<HighscoreEntry> highscoreEntryList;
     }
 
     [System.Serializable]
     private class HighscoreEntry {
-        public int time;
+        public float time;
         public string name;
     }
 }

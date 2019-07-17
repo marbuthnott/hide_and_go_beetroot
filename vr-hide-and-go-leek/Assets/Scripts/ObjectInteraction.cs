@@ -36,20 +36,14 @@ public class ObjectInteraction : MonoBehaviour
     }
 
      IEnumerator WinMessage() {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Leaderboard");
     }
 
     void CalculateScoreTime() {
         scoreTime = Time.time - startTime;
-    }
 
-    // void AddScore() {
-    //     leaderboardList.Add("Mag", scoreTime);
-    //     foreach( KeyValuePair<string, float> element in leaderboardList )
-    //     {
-    //         Debug.Log(element.Key);
-    //         Debug.Log(element.Value);
-    //     }
-    // }
+        PlayerPrefs.SetString("playerScore", scoreTime.ToString());
+        PlayerPrefs.Save();
+    }
 }
