@@ -41,7 +41,7 @@ public class ObjectInteraction : MonoBehaviour
     }
 
     void CalculateScoreTime() {
-        scoreTime = Time.time - startTime;
+        scoreTime = (float)System.Math.Round((Time.time - startTime),2);
 
         PlayerPrefs.SetString("playerScore", scoreTime.ToString());
         PlayerPrefs.Save();
