@@ -37,7 +37,7 @@ public class ObjectInteraction : MonoBehaviour
 
      IEnumerator WinMessage() {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Leaderboard");
+        SceneManager.LoadScene("Input");
     }
 
     void CalculateScoreTime() {

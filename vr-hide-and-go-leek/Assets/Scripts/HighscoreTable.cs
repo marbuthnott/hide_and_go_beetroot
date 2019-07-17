@@ -10,6 +10,7 @@ public class HighscoreTable : MonoBehaviour
     private Transform entryTemplate;
     // private List<HighscoreEntry> highscoreEntryList;
     private float playerTime;
+    private string playerName;
     private List<Transform> highscoreEntryTransformList;
     public ScoreManager scoreManager;
 
@@ -19,13 +20,10 @@ public class HighscoreTable : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);  
 
-        // playerTime = (float.Parse(PlayerPrefs.GetString("playerScore")));
-
-        // Debug.Log(float.Parse(PlayerPrefs.GetString("playerScore")));
-
         playerTime = float.Parse(PlayerPrefs.GetString("playerScore"));
+        playerName = PlayerPrefs.GetString("playerName");
 
-       AddHighscoreEntry((float)System.Math.Round(playerTime,2), "CMA");
+       AddHighscoreEntry((float)System.Math.Round(playerTime,2), playerName);
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
