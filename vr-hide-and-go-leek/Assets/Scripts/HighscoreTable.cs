@@ -106,15 +106,6 @@ public class HighscoreTable : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private class PlayerScore {
-        public List<PlayerScoreEntry> playerScoreEntryList;
-    }
-
-    [System.Serializable]
-    private class PlayerScoreEntry {
-        public float time;
-    }
-
     private class Highscores {
         public List<HighscoreEntry> highscoreEntryList;
     }
