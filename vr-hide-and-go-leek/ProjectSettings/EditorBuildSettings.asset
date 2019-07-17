@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/StartMenu.unity
+    path: Assets/Scenes/StartMenu1.unity
     guid: 1432324ab17cd42cfa094b3e10a92f57
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test/GVRPointerButtonTest.unity
     guid: 5add5aeddbe6944c884473f30436821d
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 1fbc89e008bb342ef8412a16f66e2a2e
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 58140a24c61ed429790d6bf710f2f35a

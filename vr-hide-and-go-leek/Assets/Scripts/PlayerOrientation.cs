@@ -14,7 +14,6 @@ public class PlayerOrientation : MonoBehaviour
         Debug.Log(overheadCamera.enabled == true);
         canvas.worldCamera = overheadCamera;
         UnityEngine.XR.InputTracking.Recenter();
-
     }
     
     public void ShowFirstPersonView() {
