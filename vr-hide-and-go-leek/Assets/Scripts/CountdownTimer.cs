@@ -26,6 +26,8 @@ public class CountdownTimer : MonoBehaviour
     {
         if (timeLeft <= 0 && !switcher) {
         	StopCoroutine("LoseTime");
+            countdownText.fontSize = 100;
+
         	countdownText.text = "Time's up! Wait for leaderboard...";
             walk.enabled = false;
             StartCoroutine("LoseMessage"); 
@@ -37,14 +39,16 @@ public class CountdownTimer : MonoBehaviour
 
     IEnumerator LoseTime() 
     {   
+        int size = 100;
         while (true) {
     		yield return new WaitForSeconds(1);
-            countdownText.fontSize = 100;
+            countdownText.fontSize = size;
     		timeLeft--;
             countdownText.color = Color.yellow;
             countdownText.text = ("" + timeLeft);
             if(timeLeft <= 5) 
             {
+                size += 50;
                 countdownText.color = Color.red;
             }
     	}    	
@@ -62,7 +66,7 @@ public class CountdownTimer : MonoBehaviour
         StartCoroutine ("LoseIntroTime");
         walk.enabled = false;
         yield return new WaitForSeconds(6);
-        countdownText.fontSize = 700;
+        countdownText.fontSize = 600;
         countdownText.color = Color.green;
         countdownText.text = "GO";
         walk.enabled = true;
