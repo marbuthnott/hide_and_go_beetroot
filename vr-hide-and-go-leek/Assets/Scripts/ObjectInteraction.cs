@@ -15,12 +15,6 @@ public class ObjectInteraction : MonoBehaviour
     public float startTime;
     private float scoreTime;
 
-    // SortedDictionary<string, float> leaderboardList;
-
-    // void Awake() {
-    //     leaderboardList = new SortedDictionary<string, float>();
-    // }
-
     void Start() {
         startTime = Time.time;
     }

@@ -24,22 +24,32 @@ public class HighscoreTable : MonoBehaviour
         playerTime = float.Parse(PlayerPrefs.GetString("playerScore"));
         playerName = PlayerPrefs.GetString("playerName");
 
-        AddHighscoreEntry(playerTime, playerName);
+        // add entry if player completed the maze
+        if (playerTime != 0.0f) {
+            AddHighscoreEntry(playerTime, playerName);
+        }
+
+        // hide playerscore if player did not find the treasure
+        if (playerTime == 0) {
+            entryPlayerScore.Find("posText").GetComponent<Text>().text = "";
+            entryPlayerScore.Find("timeText").GetComponent<Text>().text = "";
+            entryPlayerScore.Find("nameText").GetComponent<Text>().text = "";
+        }
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         // Sort entry list by score
-            for (int i=0; i < highscores.highscoreEntryList.Count; i++) {
-                for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++) {  
-                    if (highscores.highscoreEntryList[j].time < highscores.highscoreEntryList[i].time) {
-                        // Swap
-                        HighscoreEntry tmp = highscores.highscoreEntryList[i];
-                        highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
-                        highscores.highscoreEntryList[j] = tmp;                            
-                    }  
-                }
+        for (int i=0; i < highscores.highscoreEntryList.Count; i++) {
+            for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++) {  
+                if (highscores.highscoreEntryList[j].time < highscores.highscoreEntryList[i].time) {
+                    // Swap
+                    HighscoreEntry tmp = highscores.highscoreEntryList[i];
+                    highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
+                    highscores.highscoreEntryList[j] = tmp;                            
+                }  
             }
+        }
 
         highscoreEntryTransformList = new List<Transform>();
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) {
@@ -62,8 +72,6 @@ public class HighscoreTable : MonoBehaviour
         }
         
         float time = highscoreEntry.time;
-        Debug.Log(time);
-        Debug.Log(playerTime);
 
         if (time == playerTime) {
             entryPlayerScore.Find("posText").GetComponent<Text>().text = rankString;

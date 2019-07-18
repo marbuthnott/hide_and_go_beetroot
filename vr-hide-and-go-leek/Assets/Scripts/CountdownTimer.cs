@@ -29,6 +29,9 @@ public class CountdownTimer : MonoBehaviour
             walk.enabled = false;
             StartCoroutine("LoseMessage"); 
             cameraSwitcher.ShowOverheadView();
+
+            PlayerPrefs.SetString("playerScore", "0");
+            PlayerPrefs.Save();
         } 
     }
 
