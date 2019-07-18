@@ -4,6 +4,10 @@
 
 A virtual reality game where the players are up against the clock to find the golden leek from within the virtual world.
 
+## GETTING STARTED
+
+## HOW TO USE THE APP
+
 ## USER STORIES
 
 REQUIRED
@@ -43,6 +47,12 @@ As a game player,
 So that I can have a nice experience,
 I would like to hear some moody music while I play the game.
 ```
+
+## TECH/FRAMEWORK USED
+
+## RUNNING TESTS
+
+## MODELS/IMAGES
 
 ### Co-authoring
 

@@ -29,7 +29,7 @@ public class HighscoreTable : MonoBehaviour
             AddHighscoreEntry(playerTime, playerName);
         }
 
-        // hide playerscore if player did not find the treasure
+        // hide playerscore if player did not find the treasure and add lose message
         if (playerTime == 0) {
             entryPlayerScore.Find("posText").GetComponent<Text>().text = "";
             entryPlayerScore.Find("timeText").GetComponent<Text>().text = "";
