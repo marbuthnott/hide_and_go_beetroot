@@ -36,7 +36,7 @@ public class HighscoreTable : MonoBehaviour
         entryTemplate.gameObject.SetActive(false);  
 
         playerTime = float.Parse(PlayerPrefs.GetString("playerScore"));
-        playerName = PlayerPrefs.GetString("playerName");
+        playerName = PlayerPrefs.GetString("playerName").ToUpper();
 
         // add entry if player completed the maze
         if (playerTime != 0.0f) {

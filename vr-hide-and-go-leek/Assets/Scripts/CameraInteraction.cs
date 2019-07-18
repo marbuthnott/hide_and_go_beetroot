@@ -25,6 +25,7 @@ public class CameraInteraction : MonoBehaviour {
         	if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out theObject)) {
         		if (theObject.transform.name == "GoSphere") {
         			GameObject.Find("GoSphere").SetActive(false);
+							GameObject.Find("LeaderboardSphere").SetActive(false);
 
         			GameObject.Find("EasySphere").GetComponent<MeshRenderer>().enabled = true;
         			GameObject.Find("EasyTextSphere").GetComponent<MeshRenderer>().enabled = true;
@@ -50,6 +51,12 @@ public class CameraInteraction : MonoBehaviour {
 
 				if (theObject.transform.name == "StartMenuObject") {
 					SceneManager.LoadScene("StartMenu");
+				}
+
+				if (theObject.transform.name == "LeaderboardSphere") {
+					SceneManager.LoadScene("Leaderboard");
+					PlayerPrefs.SetString("playerScore", "0");
+          PlayerPrefs.Save();
 				}
         	}
         }
