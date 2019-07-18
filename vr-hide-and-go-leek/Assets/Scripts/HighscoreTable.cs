@@ -34,6 +34,7 @@ public class HighscoreTable : MonoBehaviour
             entryPlayerScore.Find("posText").GetComponent<Text>().text = "";
             entryPlayerScore.Find("timeText").GetComponent<Text>().text = "";
             entryPlayerScore.Find("nameText").GetComponent<Text>().text = "";
+            entryPlayerScore.Find("loseMessage").GetComponent<Text>().text = "Better luck next time";
         }
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
