@@ -10,27 +10,34 @@ public class ObjectInteraction : MonoBehaviour
     public CountdownTimer timer;
     public PlayerWalk walk;
     public PlayerOrientation cameraSwitcher;
-    public ScoreManager scoreManager;
 
     public float startTime;
     private float scoreTime;
 
-    void Start() {
+    void Start () 
+    {
         startTime = Time.time;
+        hitObjectText = GameObject.Find("Timer").GetComponent(typeof(Text)) as Text;
+        timer = GameObject.Find("Timer").GetComponent(typeof(CountdownTimer)) as CountdownTimer;
+        walk = GameObject.Find("Player").GetComponent(typeof(PlayerWalk)) as PlayerWalk;
+        cameraSwitcher = GameObject.Find("floor").GetComponent(typeof(PlayerOrientation)) as PlayerOrientation;
     }
 
-    void OnCollisionEnter() {   
+    void OnCollisionEnter()
+    {
+        Debug.Log("Hit Object");
         timer.enabled = false;
+        hitObjectText.color = Color.green;
         hitObjectText.text = "You win!";
         walk.enabled = false;
         CalculateScoreTime();
-        scoreManager.UpdateScore(scoreTime);
         StartCoroutine("WinMessage");
         cameraSwitcher.ShowOverheadView();
+        timer.StopCoroutine("LoseTime");
     }
 
      IEnumerator WinMessage() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("Input");
     }
 
@@ -39,5 +46,6 @@ public class ObjectInteraction : MonoBehaviour
 
         PlayerPrefs.SetString("playerScore", scoreTime.ToString());
         PlayerPrefs.Save();
+
     }
 }

@@ -13,7 +13,6 @@ public class HighscoreTable : MonoBehaviour
     private string playerName;
     private List<HighscoreEntry> highscoreEntryList;
     private List<Transform> highscoreEntryTransformList;
-    public ScoreManager scoreManager;
 
     private void Awake() {
         
