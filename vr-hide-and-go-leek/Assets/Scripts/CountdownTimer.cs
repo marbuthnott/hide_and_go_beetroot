@@ -28,7 +28,7 @@ public class CountdownTimer : MonoBehaviour
         	StopCoroutine("LoseTime");
             countdownText.fontSize = 100;
 
-        	countdownText.text = "Time's up! Wait for leaderboard...";
+        	countdownText.text = "Time's up! \nWait for \nleaderboard...";
             walk.enabled = false;
             StartCoroutine("LoseMessage"); 
             cameraSwitcher.ShowOverheadView();

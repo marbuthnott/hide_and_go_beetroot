@@ -28,7 +28,7 @@ public class ObjectInteraction : MonoBehaviour
         Debug.Log("Hit Object");
         timer.enabled = false;
         hitObjectText.color = Color.green;
-        hitObjectText.text = "You win!";
+        hitObjectText.text = "You win!\nWait for\nleaderboard";
         walk.enabled = false;
         CalculateScoreTime();
         StartCoroutine("WinMessage");
