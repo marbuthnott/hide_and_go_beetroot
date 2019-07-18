@@ -17,7 +17,7 @@ public class HighscoreTable : MonoBehaviour
 
     private void Awake() {
         
-        if (PlayerPrefs.GetString("highscoreTable") == null) {
+        if (PlayerPrefs.GetString("highscoreTable") == "") {
             highscoreEntryList = new List<HighscoreEntry>() {
                 new HighscoreEntry{ time = 10, name = "AAA"},
                 new HighscoreEntry{ time = 8, name = "BBB"},
