@@ -11,10 +11,25 @@ public class HighscoreTable : MonoBehaviour
     private Transform entryPlayerScore;
     private float playerTime;
     private string playerName;
+    private List<HighscoreEntry> highscoreEntryList;
     private List<Transform> highscoreEntryTransformList;
     public ScoreManager scoreManager;
 
     private void Awake() {
+        
+        if (PlayerPrefs.GetString("highscoreTable") == null) {
+            highscoreEntryList = new List<HighscoreEntry>() {
+                new HighscoreEntry{ time = 10, name = "AAA"},
+                new HighscoreEntry{ time = 8, name = "BBB"},
+            };
+
+            Highscores setupHighscores = new Highscores {highscoreEntryList = highscoreEntryList };
+            string json = JsonUtility.ToJson(setupHighscores);
+            PlayerPrefs.SetString("highscoreTable", json);
+            PlayerPrefs.Save();
+        }
+        
+
         entryContainer = transform.Find("HighscoreEntryContainer");
         entryTemplate = entryContainer.Find("HighscoreEntryTemplate");
         entryPlayerScore = entryContainer.Find("PlayerScore");
@@ -105,8 +120,11 @@ public class HighscoreTable : MonoBehaviour
         // Load saved Highscores
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
+        Debug.Log($"jsonString = {jsonString}");
         // Add new entry to Highscores
+        Debug.Log($"highscores = {highscores}");
+        Debug.Log($"highscores.highscoreEntryList = {highscores.highscoreEntryList}");
+        Debug.Log($"highscoreEntry = {highscoreEntry}");
         highscores.highscoreEntryList.Add(highscoreEntry);
 
         // Save update Highscores

@@ -17,7 +17,6 @@ public class LevelLoader : MonoBehaviour
     public void LoadLevelLeaderboard()
     {
         playerName = GameObject.Find("InputText").GetComponent<Text>().text;
-        Debug.Log(playerName);
         PlayerPrefs.SetString("playerName", playerName);
         PlayerPrefs.Save();
 
