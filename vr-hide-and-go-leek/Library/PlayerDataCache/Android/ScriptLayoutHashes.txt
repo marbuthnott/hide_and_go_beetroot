@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/student/Projects/vr-hide-and-go-leek/vr-hide-and-go-leek/leaderboard_and_maze_gen.apk
+/Users/student/Projects/vr-hide-and-go-leek/vr-hide-and-go-leek/styling.apk
 SceneListBegin?
 Assets/Scenes/StartMenu.unity
 Assets/Scenes/Main.unity

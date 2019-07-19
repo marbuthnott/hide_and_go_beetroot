@@ -18,8 +18,8 @@ public class HighscoreTable : MonoBehaviour
         
         if (PlayerPrefs.GetString("highscoreTable") == "") {
             highscoreEntryList = new List<HighscoreEntry>() {
-                new HighscoreEntry{ time = 10, name = "AAA"},
-                new HighscoreEntry{ time = 8, name = "BBB"},
+                new HighscoreEntry{ time = 50, name = "AAA"},
+                new HighscoreEntry{ time = 58, name = "BBB"},
             };
 
             Highscores setupHighscores = new Highscores {highscoreEntryList = highscoreEntryList };
