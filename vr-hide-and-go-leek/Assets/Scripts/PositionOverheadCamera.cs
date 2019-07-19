@@ -8,6 +8,6 @@ public class PositionOverheadCamera : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(40, 20, 25);
+        transform.position = new Vector3(40, 15, 25);
     }
 }

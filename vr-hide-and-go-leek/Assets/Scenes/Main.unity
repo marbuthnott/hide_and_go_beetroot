@@ -988,6 +988,7 @@ MonoBehaviour:
   timer: {fileID: 1493100341}
   walk: {fileID: 2003032631}
   cameraSwitcher: {fileID: 311747010}
+  countdownText: {fileID: 0}
   startTime: 0
 --- !u!135 &1274768249
 SphereCollider:
@@ -1310,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23014ae4ff3eb4a8fac9f114fa19b01e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 30
+  timeLeft: 60
   countdownText: {fileID: 1493100339}
   walk: {fileID: 2003032631}
   cameraSwitcher: {fileID: 311747010}

@@ -11,6 +11,7 @@ public class ObjectInteraction : MonoBehaviour
     public PlayerWalk walk;
     public PlayerOrientation cameraSwitcher;
 
+
     public float startTime;
     private float scoreTime;
 
@@ -21,6 +22,7 @@ public class ObjectInteraction : MonoBehaviour
         timer = GameObject.Find("Timer").GetComponent(typeof(CountdownTimer)) as CountdownTimer;
         walk = GameObject.Find("Player").GetComponent(typeof(PlayerWalk)) as PlayerWalk;
         cameraSwitcher = GameObject.Find("floor").GetComponent(typeof(PlayerOrientation)) as PlayerOrientation;
+
     }
 
     void OnCollisionEnter()
@@ -28,6 +30,7 @@ public class ObjectInteraction : MonoBehaviour
         Debug.Log("Hit Object");
         timer.enabled = false;
         hitObjectText.color = Color.green;
+        hitObjectText.fontSize = 50;
         hitObjectText.text = "You win!\nWait for\nleaderboard";
         walk.enabled = false;
         CalculateScoreTime();
