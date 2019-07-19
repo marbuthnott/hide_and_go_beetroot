@@ -74,7 +74,7 @@ I would like to hear some moody music while I play the game.
 
 **Testing framework:** *nunit* is an open-source unit testing framework for Microsoft .NET.
 
-**Game engine:** *Unity Game Engine* is the ultimate game development platform. It is used to build high-quality 3D and 2D games, deployable across mobile, desktop, VR/AR, console.
+**Game engine:** *Unity Game Engine Version 2018.3.14f1*. Unity is the ultimate game development platform. It is used to build high-quality 3D and 2D games, deployable across mobile, desktop, VR/AR, console.
 
 **VR libraries:** *Google VR* provides an SDK (Software Development Kit) which uses APIs to help with the creation of key VR features like user input, controller support, and rendering.
 
