@@ -1,6 +1,8 @@
 Hide And Go Beetroot
 ====================
 
+![game screenshot](./images/beetroot_screenshot.png?raw=true)
+
 *Co-authored by: Carlton Anand, Vlad Chiriac, Nicholas Barnes, and Magnus Arbuthnott*
 
 *Click this for notes from our daily stand ups and retrospectives ==>* ***[Wiki](https://github.com/Carlton7/vr-hide-and-go-leek/wiki)***
@@ -80,4 +82,6 @@ I would like to hear some moody music while I play the game.
 
 **Game deployment:** *Oculus* which is a digital entertainment company. It was used to power our virtual reality gameplay.
 
-## APPROACH
+## DEMO
+
+[![Demo](http://img.youtube.com/vi/4pK14BlfLls/0.jpg)](http://www.youtube.com/watch?v=4pK14BlfLls "https://github.com/marbuthnott/vr-hide-and-go-leek/blob/master/images/title_beetroot.png?raw=true")
