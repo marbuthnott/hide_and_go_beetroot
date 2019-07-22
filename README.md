@@ -7,9 +7,9 @@ Hide And Go Beetroot
 
 ## INTRODUCTION
 
-Introducing Hide And Go Beetroot, a virtual reality game where you'll have to navigate the maze and find the leek before the time runs out.
+Introducing Hide And Go Beetroot, a virtual reality game where you'll have to navigate the maze and find the 3D beetroot before the time runs out.
 
-This game was created as the final project of the Makers Academy software engineering bootcamp. The game flow will take the player from a start menu scene, to the game, a scene where the player enters their name, leaderboard with a button to take the player back to the start menu. Through the use of a maze creation algorithm every maze that the player attempts will be entirely unique.
+This game was created as the final project of the Makers Academy software engineering bootcamp. The game will take the player from a start menu, into the game, to a scene where the player enters their name, and will finally display a leaderboard with a button to take the player back to the start menu. Through the use of a maze creation algorithm every maze that the player attempts will be entirely unique.
 
 ## GETTING STARTED
 
@@ -24,8 +24,8 @@ We have a premade file for use with Samsung phones and Gear VR headsets. In orde
 ## HOW TO USE THE GAME
 
 1. Enter the VR world and you'll see the startmenu. Use the touch pad on the side of the VR headset to tap and select the game object called `PLAY` and then choose the difficulty.
-2. In the game scene you'll be able to move by pressing and holding the touchpad. If you find the leek in time you'll be directed to a scene to enter your details. If you run out of time you'll jump straight to the leaderboard scene.
-3. If you find the leek in time you'll be asked to enter your details. Enter your name using the floating keyboard and the reticle in the centre of the view.
+2. In the game scene you'll be able to move by pressing and holding the touchpad. If you find the beetroot in time you'll be directed to a scene to enter your details. If you run out of time you'll jump straight to the leaderboard scene.
+3. If you find the beetroot in time you'll be asked to enter your details. Enter your name using the floating keyboard and the reticle in the centre of the view.
 4. On the leaderboard scene you'll see a list of the top ten times, and if you were successful your own time and position at the bottom of the screen. Once you have finished looking at the leaderboard you can click the `START MENU` object at the bottom of the screen.
 
 ## USER STORIES
