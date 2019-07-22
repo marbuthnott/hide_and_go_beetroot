@@ -30,6 +30,13 @@ We have a premade file for use with Samsung phones and Gear VR headsets. In orde
 3. If you find the beetroot in time you'll be asked to enter your details. Enter your name using the floating keyboard and the reticle in the centre of the view.
 4. On the leaderboard scene you'll see a list of the top ten times, and if you were successful your own time and position at the bottom of the screen. Once you have finished looking at the leaderboard you can click the `START MENU` object at the bottom of the screen.
 
+## DEMO
+
+Click on the image to be directed to our demo:
+
+
+[![Demo](http://img.youtube.com/vi/4pK14BlfLls/0.jpg)](http://www.youtube.com/watch?v=4pK14BlfLls "https://github.com/marbuthnott/vr-hide-and-go-leek/blob/master/images/title_beetroot.png?raw=true")
+
 ## USER STORIES
 
 REQUIRED
@@ -81,7 +88,3 @@ I would like to hear some moody music while I play the game.
 **VR libraries:** *Google VR* provides an SDK (Software Development Kit) which uses APIs to help with the creation of key VR features like user input, controller support, and rendering.
 
 **Game deployment:** *Oculus* which is a digital entertainment company. It was used to power our virtual reality gameplay.
-
-## DEMO
-
-[![Demo](http://img.youtube.com/vi/4pK14BlfLls/0.jpg)](http://www.youtube.com/watch?v=4pK14BlfLls "https://github.com/marbuthnott/vr-hide-and-go-leek/blob/master/images/title_beetroot.png?raw=true")
