@@ -17,11 +17,11 @@ This game was created as the final project of the Makers Academy software engine
 
 We have a premade file for use with Samsung phones and Gear VR headsets. In order to get this working follow these steps:
 
-- Get the complete project by running `git clone git@github.com:Carlton7/vr-hide-and-go-leek.git` in your terminal.
+- Get the complete project by running `git clone git@github.com:marbuthnott/hide_and_go_beetroot.git` in your terminal.
 - Connect your Samsung to your computer.
-- In the project repository find the file `vr-hide-and-go-leek/game_version01.apk` and drag into your mobile phone file structure.
+- In the project repository find the file `hide_and_go_beetroot/game_version01.apk` and drag into your mobile phone file structure.
 - On your phone access the file and download.
-- Now all you will have to do is open the vr-hide-and-go-leek file on your phone, attach it to the headset and you'll be able to enter the virtual world.
+- Now all you will have to do is open the hide_and_go_beetroot file on your phone, attach it to the headset and you'll be able to enter the virtual world.
 
 ## HOW TO USE THE GAME
 
@@ -35,7 +35,7 @@ We have a premade file for use with Samsung phones and Gear VR headsets. In orde
 Click on the image to be directed to our demo:
 
 
-[![Demo](http://img.youtube.com/vi/4pK14BlfLls/0.jpg)](http://www.youtube.com/watch?v=4pK14BlfLls "https://github.com/marbuthnott/vr-hide-and-go-leek/blob/master/images/title_beetroot.png?raw=true")
+[![Demo](http://img.youtube.com/vi/4pK14BlfLls/0.jpg)](http://www.youtube.com/watch?v=4pK14BlfLls "https://github.com/marbuthnott/hide_and_go_beetroot/blob/master/images/title_beetroot.png?raw=true")
 
 ## USER STORIES
 
@@ -46,12 +46,12 @@ So that I can enter the maze and start a game,
 I would like to be positioned at the maze entrance.
 
 As a game player,
-So that I can search for the leek,
+So that I can search for the beetroot,
 I would like to be able to move in different directions.
 
 As a game player,
 So that I can complete a game,
-I would like to be able to see and interact with a leek.
+I would like to be able to see and interact with a beetroot.
 
 As a game player,
 So that I can see how well I've done,
@@ -59,7 +59,7 @@ I would like to be able to see my time on the screen.
 
 As a game player,
 So that I can lose a game,
-I would like to be able to have a timer that ends the game if I can't find the leek.
+I would like to be able to have a timer that ends the game if I can't find the beetroot.
 ```
 
 NICE TO HAVE
